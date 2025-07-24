@@ -1,7 +1,7 @@
 body {
+  background: linear-gradient(to right,#D16BA5 ,#86A8E7,#5FFBF1);
   margin: 0;
   padding: 0;
-  background: #f9f9f9;
   font-family: "Roboto", sans-serif;
 }
 
@@ -10,19 +10,19 @@ body {
   align-items: center;
   justify-content: center;
   gap: 40px;
-  min-height: 80vh;
-  padding: 30px;
+  height: 80vh;
+  padding: 30px;  
 }
 
 .container {
-  background: #ffffff;
+
   padding: 50px 60px;
   border-radius: 16px;
-  box-shadow: 0 9px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 9px 20px rgba(0, 0, 0, 0.5);
   text-align: center;
   max-width: 480px;
   width: 100%;
-  height: 100%;
+  height: 54vh;
 }
 
 .title {
@@ -53,6 +53,7 @@ button {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
+
 #start {
   background-color: #27ae60;
 }
@@ -62,7 +63,7 @@ button {
 }
 
 #reset {
-  background-color: #5bc1c9;
+  background-color:#007ca1;
 }
 #start:hover, #stop:hover, #reset:hover {
   cursor: pointer;
@@ -78,14 +79,13 @@ button {
   color: white;
 }
 
+
 /* === SOUND PANEL === */
 .sound-panel {
-  background-color: #1e1e1e;
   color: #fff;
   padding: 24px;
   border-radius: 16px;
   width: 260px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
   flex-shrink: 0;
 }
 
@@ -110,9 +110,10 @@ button {
   font-weight: 400;
 }
 
-/* SLIDER STYLES  */
+/* === SLIDER STYLES === */
 input[type="range"] {
   background: linear-gradient(to right, #4facfe, #00f2fe);
+  -webkit-appearance: none;
   width: 100%;
   height: 6px;
   border-radius: 5px;
@@ -132,10 +133,11 @@ input[type="range"]::-webkit-slider-thumb {
 }
 
 input[type="range"]:hover::-webkit-slider-thumb {
-   background-color: #007ca1;
+  background-color: #007ca1;
   width: 20px;
   height: 20px;
   border-color: #00f2fe;
+
 }
 
 input[type="range"]::-moz-range-thumb {
@@ -147,7 +149,7 @@ input[type="range"]::-moz-range-thumb {
   cursor: pointer;
 }
 
-/* RESPONSIVE*/
+/* === RESPONSIVE === */
 @media (max-width: 768px) {
   .main-layout {
     flex-direction: column;
@@ -161,7 +163,7 @@ input[type="range"]::-moz-range-thumb {
   }
 }
 
-/*  FULLSCREEN BUTTON */
+/* === FULLSCREEN BUTTON === */
 .fullscreen-btn {
   background: white;
   bottom: 14px;
