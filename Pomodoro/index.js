@@ -6,6 +6,7 @@ var timerDisplay = document.getElementById("timer");
 var timerInterval;
 var totalTimeInSeconds = 3000;
 var timerIsRunning = false;
+var alarmAudio = new Audio("bell.mp3");
 
 function showTime() {
   var minutes = Math.floor(totalTimeInSeconds / 60);
@@ -23,6 +24,7 @@ function startTimer() {
     } else {
       clearInterval(timerInterval);
       timerIsRunning = false;
+      alarmAudio.play().catch(() => {});
       alert("Time's up!");
     }
   }, 1000);
@@ -38,6 +40,8 @@ function resetTimer() {
   totalTimeInSeconds = 3000;
   showTime();
   timerIsRunning = false;
+  alarmAudio.pause();
+  alarmAudio.currentTime = 0;
 }
 
 startButton.addEventListener("click", startTimer);
